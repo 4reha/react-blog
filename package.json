@@ -1,6 +1,7 @@
 {
   "name": "blog",
   "version": "0.1.0",
+  "homepage": "https://4reha.github.io/react-blog",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "prestart": "npx json-server data/db.json --port 8000 &",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
